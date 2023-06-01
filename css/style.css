@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Explora&family=Itim&family=Nunito+Sans:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito Sans", sans-serif;
+  /* font-size: 40px; */
+}
+body {
+  margin: 0px;
+  background-color: #c5baa4;
+}
+
+/* NavBar */
+
+.nav-container {
+  position: sticky;
+  z-index: 3;
+  top: 0;
+  /* position: fixed; */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  background-color: #517c63;
+}
+
+.navbar-logo {
+  padding-top: 1.5vh;
+  justify-self: start;
+  margin-left: 20px;
+  color: white;
+  cursor: pointer;
+  font-size: 40px;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.2);
+  transition: all 0.3s;
+}
+
+.ver-carrito {
+  font-size: 45px;
+  margin-right: 20px;
+  margin-top: 1vh;
+  cursor: pointer;
+}
+.ver-carrito:hover {
+  transform: scale(1.2);
+  transition: all 0.3s;
+}
+
+.banner {
+  background-image: url(../img/dolarucos.gif);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+.imagengrande {
+  background-size: cover;
+}
+
+/* .banner-container {
+  text-align: center;
+  padding: 15% 0;
+} */
+
+.banner h1 {
+  margin: 0;
+  color: #ffffff;
+  text-shadow: 6px 4px 2px rgba(1, 1, 1, 1);
+  font-size: 70px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 40vh;
+}
+
+/* CARDS DOLARES */
+
+img {
+  width: 100%;
+  display: block;
+}
+
+h2 {
+  font-size: 40px;
+  text-align: center;
+  color: black;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.card {
+  background-color: #f3f0e9;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.card-header {
+  border-radius: 8px 8px 0 0;
+}
+
+.card-body {
+  padding: 20px 15px;
+  text-align: justify;
+}
+
+.btn {
+  background-color: rgb(90, 72, 56);
+  color: white;
+  display: block;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+@media (min-width: 480px) {
+  .contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+  .card {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-header {
+    height: 300px;
+    overflow: hidden;
+  }
+  .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-description {
+    flex-grow: 1;
+  }
+}
