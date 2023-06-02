@@ -1,80 +1,70 @@
-/* const productos = [
-  { nombre: "DolarOficial", precio: 10 },
-  { nombre: "DolarBlue", precio: 20 },
-  { nombre: "DolarTarjeta", precio: 30 },
-  { nombre: "DolarMEP", precio: 40 },
+const shopContent = document.getElementById("shopContent");
+
+let productos = [
+  {
+    id: 1,
+    titulo: "Dolar Oficial",
+    img: "./img/DolarOficial.png",
+    precio: 238.73,
+  },
+  {
+    id: 2,
+    titulo: "Dolar Blue",
+    img: "./img/DolarBlue.png",
+    precio: 485.0,
+  },
+  {
+    id: 3,
+    titulo: "Dolar Bolsa",
+    img: "./img/DolarBolsa.png",
+    precio: 467.31,
+  },
+  {
+    id: 4,
+    titulo: "Dolar MEP",
+    img: "./img/DolarMEP.png",
+    precio: 462.81,
+  },
+  {
+    id: 5,
+    titulo: "Dolar Cripto",
+    img: "./img/DolarCripto.png",
+    precio: 476.0,
+  },
+  {
+    id: 6,
+    titulo: "Dolar Tarjeta",
+    img: "./img/DolarTarjeta.png",
+    precio: 435.19,
+  },
 ];
+
+/* Carrito vacío */
 
 let carrito = [];
 
-let seleccion = prompt("Desea comprar algún producto si o no?");
+/* Recorrido de Productos */
 
-while (seleccion != "si" && seleccion != "no") {
-  alert("por favor ingresa si o no");
-  seleccion = prompt("hola desea comprar algo si o no?");
-}
+productos.forEach((product) => {
+  let content = document.createElement("div");
+  content.className = "card";
+  {
+    content.innerHTML = `<div class="card-header">
+  <img src="${product.img}">
+  </div>
 
-if (seleccion == "si") {
-  alert("a continuación nuestra lista de Dolares");
-  let todosLosProductos = productos.map(
-    (producto) => producto.nombre + " " + producto.precio + "$"
-  );
-  alert(todosLosProductos.join(" - "));
-} else if (seleccion == "no") {
-  alert("graciar por venir, hasta pronto!!");
-}
-
-while (seleccion != "no") {
-  let producto = prompt("Agrega un producto a tu carrito de compra");
-  let precio = 0;
-
-  if (
-    producto == "DolarOficial" ||
-    producto == "DolarBlue" ||
-    producto == "DolarTarjeta" ||
-    producto == "DolarMEP"
-  ) {
-    switch (producto) {
-      case "DolarOficial":
-        precio = 10;
-        break;
-      case "DolarBlue":
-        precio = 20;
-        break;
-      case "DolarTarjeta":
-        precio = 30;
-        break;
-      case "DolarMEP":
-        precio = 40;
-        break;
-      default:
-        break;
-    }
-    let unidades = parseInt(prompt("cuantas unidades quiere llevar?"));
-
-    carrito.push({ producto, unidades, precio });
-    console.log(carrito);
-  } else {
-    alert("no tenemos ese producto");
+  <div class="card-body">
+  <h3 class="card-title">${product.titulo}</h3>
+  <p class="card-description">$ ${product.precio}</p>
+  <a href="#" class="btn">Comprar</a>
+  </div>
+  `;
   }
 
-  seleccion = prompt("Desea seguir comprando?");
+  /* let comprar = document.createElement("button");
+  comprar.innerText = "comprar";
+  comprar.className = "btn";
 
-  while (seleccion === "no") {
-    alert("Gracias por la compra!, hasta pronto");
-    carrito.forEach((carritoFinal) => {
-      console.log(
-        `producto: ${carritoFinal.producto}, unidades: ${
-          carritoFinal.unidades
-        }, total a pagar por producto: ${
-          carritoFinal.unidades * carritoFinal.precio
-        }`
-      );
-    });
-    break;
-  }
-}
-
-const total = carrito.reduce((acc, el) => acc + el.precio * el.unidades, 0);
-console.log(`el total a pagar por su compra es: ${total}`);
- */
+  content.append(comprar); */
+  shopContent.append(content);
+});

@@ -24,12 +24,12 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
-  height: 10vh;
+  height: 14vh;
   background-color: #517c63;
 }
 
 .navbar-logo {
-  padding-top: 1.5vh;
+  margin-top: 2vh;
   justify-self: start;
   margin-left: 20px;
   color: white;
@@ -93,9 +93,9 @@ h2 {
   padding-bottom: 3rem;
 }
 
-.contenedor {
+.shop-content {
   width: 90%;
-  max-width: 1200px;
+  max-width: 900px;
   margin: 20px auto;
 }
 
@@ -103,6 +103,7 @@ h2 {
   background-color: #f3f0e9;
   margin-bottom: 10px;
   border-radius: 8px;
+  max-height: 100%;
 }
 
 .card-header {
@@ -125,8 +126,8 @@ h2 {
   border-radius: 8px;
 }
 
-@media (min-width: 480px) {
-  .contenedor {
+@media (min-width: 640px) {
+  .shop-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
@@ -137,7 +138,7 @@ h2 {
     flex-direction: column;
   }
   .card-header {
-    height: 300px;
+    height: 200px;
     overflow: hidden;
   }
   .card-body {
