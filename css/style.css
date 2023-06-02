@@ -95,7 +95,7 @@ h2 {
 
 .shop-content {
   width: 90%;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 20px auto;
 }
 
@@ -103,7 +103,6 @@ h2 {
   background-color: #f3f0e9;
   margin-bottom: 10px;
   border-radius: 8px;
-  max-height: 100%;
 }
 
 .card-header {
@@ -121,12 +120,15 @@ h2 {
   display: block;
   padding: 10px;
   text-align: center;
+  cursor: pointer;
   text-decoration: none;
   margin-top: 10px;
   border-radius: 8px;
+  width: 100%;
+  font-size: 20px;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 900px) {
   .shop-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -138,7 +140,7 @@ h2 {
     flex-direction: column;
   }
   .card-header {
-    height: 200px;
+    height: 300px;
     overflow: hidden;
   }
   .card-body {
