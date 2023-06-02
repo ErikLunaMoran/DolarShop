@@ -3,9 +3,9 @@ const verCarrito = document.getElementById("verCarrito");
 const modalContainer = document.getElementById("modal-container");
 const cantidadCarrito = document.getElementById("cantidadCarrito");
 
-/* Carrito vacío */
+/* Carrito vacío o lo que esté guardado en el Local Storage*/
 
-let carrito = [];
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 /* Recorrido de Productos */
 
@@ -65,7 +65,10 @@ productos.forEach((product) => {
   });
 });
 
+/* Local Storage */
 /* seteo items  a guardar*/
 const saveLocal = () => {
   localStorage.setItem("carrito", JSON.stringify(carrito));
 };
+
+/* get item */

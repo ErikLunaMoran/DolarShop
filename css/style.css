@@ -235,3 +235,13 @@ h2 {
   position: absolute;
   display: none; /* de momento no se ve */
 }
+
+/* botones de sumar y restar productos */
+
+.sumar {
+  cursor: pointer;
+}
+
+.restar {
+  cursor: pointer;
+}
