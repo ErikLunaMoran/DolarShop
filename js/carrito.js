@@ -34,6 +34,8 @@ const pintarCarrito = () => {
                   <p>Cantidad: ${product.cantidad}</p>
                   <span class="sumar"> + </span>
                   <p>Total: ${product.cantidad * product.precio}</p>
+                  <span class="delete-product"> ❌ </span>
+
                 `;
 
     modalContainer.append(carritoContent);
@@ -58,17 +60,20 @@ const pintarCarrito = () => {
       pintarCarrito();
     });
 
-    /* ¿cuanta cantidad de objetos tengo? */
-    console.log(carrito.length);
+    let eliminar = carritoContent.querySelector(".delete-product");
+
+    eliminar.addEventListener("click", () => {
+      eliminarProducto(product.id);
+    });
 
     /* boton para eliminar productos */
 
-    let eliminar = document.createElement("span");
+    /* let eliminar = document.createElement("span");
     eliminar.innerText = "❌";
     eliminar.className = "delete-product";
     carritoContent.append(eliminar);
 
-    eliminar.addEventListener("click", eliminarProducto);
+    eliminar.addEventListener("click", eliminarProducto); */
   });
 
   /* Calcular el total de productos añadidos */
@@ -84,9 +89,9 @@ const pintarCarrito = () => {
 verCarrito.addEventListener("click", pintarCarrito);
 
 /* Aliminar producto que estaba agregado al carrito */
-const eliminarProducto = () => {
+const eliminarProducto = (id) => {
   /* encuentro la id del producto */
-  const foundId = carrito.find((element) => element.id);
+  const foundId = carrito.find((element) => element.id === id);
 
   carrito = carrito.filter((carritoId) => {
     return carritoId !== foundId;
