@@ -24,7 +24,7 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
-  height: 14vh;
+  height: 10vh;
   background-color: #517c63;
 }
 
@@ -79,6 +79,11 @@ body {
 }
 
 /* Footer */
+
+.footer-container {
+  background-color: #517c63;
+  text-align: center;
+}
 
 /* CARDS DOLARES */
 
@@ -162,7 +167,7 @@ h2 {
   margin: 0 10%;
   max-height: 88vh;
   color: white;
-  background-color: black;
+  background-color: rgb(120, 120, 120);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -183,7 +188,7 @@ h2 {
 .modal-header {
   display: flex;
   justify-content: space-around;
-  background-color: black;
+  background-color: #ab9c81;
   color: white;
   width: 100%;
 }
@@ -207,7 +212,7 @@ h2 {
 
 .modal-container > div > img {
   height: 120px;
-  width: 120px;
+  width: 180px;
 }
 
 .total-content {
