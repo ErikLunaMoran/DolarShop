@@ -38,6 +38,9 @@ const getProducts = async () => {
     content.append(comprar);
 
     comprar.addEventListener("click", () => {
+      /* alerta de que se agregó correctamente al carrito */
+      swal("Perfecto", "Se ha añadido al carrito ;)!", "success");
+
       /* Checkeo que el producto no esté repetido */
       const repeat = carrito.some(
         (repeatProduct) => repeatProduct.id === product.id

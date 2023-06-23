@@ -35,7 +35,7 @@ const pintarCarrito = () => {
                   <span class="sumar"> + </span>
                   <p>Total: ${product.cantidad * product.precio}</p>
                   <span class="delete-product"> ❌ </span>
-
+                  
                 `;
 
     modalContainer.append(carritoContent);
@@ -63,17 +63,12 @@ const pintarCarrito = () => {
     let eliminar = carritoContent.querySelector(".delete-product");
 
     eliminar.addEventListener("click", () => {
+      /* alerta de que se elimito correctamente el producto */
+      swal("Perfecto", "Se ha eliminado el producto del carrito!", "success");
       eliminarProducto(product.id);
     });
 
-    /* boton para eliminar productos */
-
-    /* let eliminar = document.createElement("span");
-    eliminar.innerText = "❌";
-    eliminar.className = "delete-product";
-    carritoContent.append(eliminar);
-
-    eliminar.addEventListener("click", eliminarProducto); */
+    eliminar.addEventListener("click", eliminarProducto);
   });
 
   /* Calcular el total de productos añadidos */
@@ -82,8 +77,17 @@ const pintarCarrito = () => {
   const totalBuying = document.createElement("div");
   totalBuying.className = "total-content";
   totalBuying.innerHTML = `
-    Total a pagar: $ ${total}`;
+    Total a pagar: $ ${total}
+    <span class="pagar-total"> Finalizar Compra </span>`;
+
   modalContainer.append(totalBuying);
+
+  let pagarTotal = totalBuying.querySelector(".pagar-total");
+
+  pagarTotal.addEventListener("click", () => {
+    /* alerta de que se ha hecho la compra final */
+    swal("Perfecto", "Total a Pagar: $ " + total, "success");
+  });
 };
 
 verCarrito.addEventListener("click", pintarCarrito);

@@ -228,6 +228,21 @@ h2 {
   cursor: pointer;
 }
 
+/* Botón de pagar el total */
+.pagar-total {
+  background-color: rgb(90, 72, 56);
+  color: white;
+  display: block;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 10px;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 20px;
+}
+
 /* Carrito contador */
 .cantidad-carrito {
   background-color: red;
